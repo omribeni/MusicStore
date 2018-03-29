@@ -8,7 +8,7 @@ const path = require('path');
 const http = require('http');
 const bodyParser = require('body-parser');
 
-const opn = require('opn');
+// const opn = require('opn');
 
 // Get our API routes
 const api = require('./server/routes/api');
@@ -48,7 +48,7 @@ server.listen(port, () => console.log(`API running on localhost:${port}`));
 
 
 // Opens the url in the default browser
-opn('http://localhost:3000');
+// opn('http://localhost:3000');
 
 // Specify the app to open in
 // opn('http://sindresorhus.com', {app: 'firefox'});

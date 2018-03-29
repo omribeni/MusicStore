@@ -5,9 +5,10 @@
   "scripts": {
     "ng": "ng",
     "build": "ng build && nodemon server.js",
-    "client": "ng build -op dist -w",
     "server": "nodemon server.js",
-    "start": "npm-run-all -p client server",
+    "client": "ng build -op dist -w",
+    "browser": "start http://localhost:3000",
+    "start": "npm-run-all -p server client browser",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
