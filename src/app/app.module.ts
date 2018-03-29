@@ -4,15 +4,19 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+// Import the Http Module and our Data Service
+import { HttpClientModule } from "@angular/common/http";
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

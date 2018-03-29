@@ -4,8 +4,10 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build --prod",
+    "build": "ng build && nodemon server.js",
+    "client": "ng build -op dist -w",
+    "server": "nodemon server.js",
+    "start": "npm-run-all -p client server",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -21,7 +23,11 @@
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
+    "body-parser": "^1.18.2",
     "core-js": "^2.4.1",
+    "express": "^4.16.3",
+    "mongodb": "^3.0.5",
+    "opn": "^5.3.0",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
   },
@@ -40,6 +46,7 @@
     "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "npm-run-all": "^4.1.2",
     "protractor": "~5.1.2",
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
